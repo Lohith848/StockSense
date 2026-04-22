@@ -1,16 +1,154 @@
-# React + Vite
+# 📊 StockSense
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Know what the market is feeling. Right now.**
+> AI-powered stock sentiment analyzer — Bullish, Bearish, or Neutral in seconds.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [StockSense.vercel.app](https://StockSense.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## What is StockSense?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**StockSense** is a web application that analyzes real-time stock news and market data for any ticker symbol and returns a clear sentiment signal — **Bullish , Bearish , or Neutral ** — along with a plain-English explanation of why.
 
-## Expanding the ESLint configuration
+Built for retail investors who don't have time to read 50 articles before making a trade decision.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- **Ticker Search** — Enter any stock symbol (AAPL, TSLA, RELIANCE, NIFTY50, etc.)
+- **Sentiment Score** — Bullish / Bearish / Neutral with confidence level
+- **Live News Feed** — Latest headlines fetched in real-time via NewsAPI
+- **Yahoo Finance Integration** — Real market data to back the sentiment signal
+- **Per-Headline Tags** — Each headline individually labeled with its sentiment
+- **Key Market Signals** — News tone, momentum, and risk indicators
+- **Fast & Clean UI** — Results in under 10 seconds
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | React + Vite |
+| **News Data** | [NewsAPI.org](https://newsapi.org) |
+| **Market Data** | Yahoo Finance API |
+| **Sentiment Logic** | Rule-based analysis + Yahoo Finance signals |
+| **Hosting** | [Vercel](https://vercel.com) |
+
+---
+
+## 📸 How It Works
+
+```
+User types: AAPL
+      ↓
+NewsAPI → fetches latest headlines
+Yahoo Finance → fetches price, change %, trend
+      ↓
+Sentiment Engine → analyzes both signals
+      ↓
+Result: BULLISH 🟢 — with confidence score
++ plain-English summary of why
++ tagged headlines + key signals
+```
+
+---
+
+## 🔧 Getting Started (Run Locally)
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/Lohith848/StockSense.git
+cd StockSense
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Set up environment variables
+
+Create a `.env` file in the root:
+```env
+VITE_NEWS_API_KEY=your_newsapi_key_here
+```
+
+> 🔑 Get a free NewsAPI key at [newsapi.org/register](https://newsapi.org/register)
+>
+> Yahoo Finance data is fetched without any authentication.
+
+### 4. Run the development server
+```bash
+npm run dev
+```
+
+App runs at `http://localhost:5173`
+
+---
+
+##  Deploy on Vercel
+
+```bash
+npm install -g vercel
+vercel
+```
+
+Or connect your GitHub repo directly at [vercel.com](https://vercel.com) for automatic deployments on every push.
+
+---
+
+## 📁 Project Structure
+
+```
+StockSense/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── SearchBar.jsx
+│   │   ├── SentimentBadge.jsx
+│   │   ├── NewsFeed.jsx
+│   │   ├── SummaryPanel.jsx
+│   │   └── SignalsGrid.jsx
+│   ├── services/
+│   │   ├── newsApi.js          ← NewsAPI integration
+│   │   └── yahooFinance.js     ← Yahoo Finance data
+│   ├── App.jsx
+│   └── main.jsx
+├── .env                        ← API keys (never commit this)
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚠️ Disclaimer
+
+StockSense is built for **educational and portfolio purposes only.**
+Sentiment scores and summaries are **not financial advice.**
+Always do your own research before making any investment decisions.
+
+---
+
+## Author
+
+**Lohith** — [@Lohith848](https://github.com/Lohith848)
+
+---
+
+## 📌 Roadmap
+
+- [ ] Fear & Greed visual meter
+- [ ] Multi-stock comparison mode
+- [ ] Watchlist with daily digest
+- [ ] Export report as PDF
+- [ ] Mobile app version
+
+---
+
+## ⭐ Support
+
+If you find this useful, drop a ⭐ on the repo — it helps a lot!
