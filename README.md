@@ -1,15 +1,15 @@
-# 📊 StockSense
+# 📊 StockTrend AI
 
 > **Know what the market is feeling. Right now.**
 > AI-powered stock sentiment analyzer — Bullish, Bearish, or Neutral in seconds.
 
-🔗 **Live Demo:** [StockSense.vercel.app](https://StockSense.vercel.app)
+🔗 **Live Demo:** [StockTrend AI](https://stock-trend-ai.vercel.app/)
 
 ---
 
-## What is StockSense?
+## What is StockTrend AI?
 
-**StockSense** is a web application that analyzes real-time stock news and market data for any ticker symbol and returns a clear sentiment signal — **Bullish , Bearish , or Neutral ** — along with a plain-English explanation of why.
+**StockTrend AI** is a web application that analyzes real-time stock news and market data for any ticker symbol and returns a clear sentiment signal — **Bullish , Bearish , or Neutral ** — along with a plain-English explanation of why.
 
 Built for retail investors who don't have time to read 50 articles before making a trade decision.
 
@@ -60,8 +60,8 @@ Result: BULLISH 🟢 — with confidence score
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/Lohith848/StockSense.git
-cd StockSense
+git clone https://github.com/Lohith848/StockTrend-AI.git
+cd StockTrend-AI
 ```
 
 ### 2. Install dependencies
@@ -104,7 +104,7 @@ Or connect your GitHub repo directly at [vercel.com](https://vercel.com) for aut
 ## 📁 Project Structure
 
 ```
-StockSense/
+StockTrend-AI/
 ├── public/
 ├── src/
 │   ├── components/
@@ -128,7 +128,7 @@ StockSense/
 
 ## ⚠️ Disclaimer
 
-StockSense is built for **educational and portfolio purposes only.**
+StockTrend AI is built for **educational and portfolio purposes only.**
 Sentiment scores and summaries are **not financial advice.**
 Always do your own research before making any investment decisions.
 

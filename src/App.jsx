@@ -356,7 +356,7 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="footer">
-        <p>© 2026 StockSense · Powered by AI</p>
+        <p>© 2026 StockTrend AI · Powered by AI</p>
       </footer>
     </div>
   );
