@@ -197,7 +197,7 @@ export default function App() {
                   className="search-input"
                   value={ticker}
                   onChange={e => setTicker(e.target.value.toUpperCase())}
-                  placeholder="Enter ticker — AAPL, TSLA, NVDA..."
+                  placeholder="Enter the Stock"
                   maxLength={12}
                 />
                 <button className="analyze-btn" onClick={() => analyze()} disabled={loading || !ticker}>
