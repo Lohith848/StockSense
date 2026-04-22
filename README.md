@@ -20,7 +20,7 @@ Built for retail investors who don't have time to read 50 articles before making
 - **Ticker Search** — Enter any stock symbol (AAPL, TSLA, RELIANCE, NIFTY50, etc.)
 - **Sentiment Score** — Bullish / Bearish / Neutral with confidence level
 - **Live News Feed** — Latest headlines fetched in real-time via NewsAPI
-- **Yahoo Finance Integration** — Real market data to back the sentiment signal
+- **Alpha Vantage Integration** — Real market data via Alpha Vantage API
 - **Per-Headline Tags** — Each headline individually labeled with its sentiment
 - **Key Market Signals** — News tone, momentum, and risk indicators
 - **Fast & Clean UI** — Results in under 10 seconds
@@ -33,8 +33,8 @@ Built for retail investors who don't have time to read 50 articles before making
 |---|---|
 | **Frontend** | React + Vite |
 | **News Data** | [NewsAPI.org](https://newsapi.org) |
-| **Market Data** | Yahoo Finance API |
-| **Sentiment Logic** | Rule-based analysis + Yahoo Finance signals |
+| **Market Data** | [Alpha Vantage](https://www.alphavantage.co/) API |
+| **Sentiment Logic** | Rule-based analysis + Alpha Vantage signals |
 | **Hosting** | [Vercel](https://vercel.com) |
 
 ---
@@ -45,7 +45,7 @@ Built for retail investors who don't have time to read 50 articles before making
 User types: AAPL
       ↓
 NewsAPI → fetches latest headlines
-Yahoo Finance → fetches price, change %, trend
+Alpha Vantage → fetches price, change %, trend
       ↓
 Sentiment Engine → analyzes both signals
       ↓
@@ -74,11 +74,12 @@ npm install
 Create a `.env` file in the root:
 ```env
 VITE_NEWS_API_KEY=your_newsapi_key_here
+VITE_ALPHA_VANTAGE_API_KEY=your_alphavantage_key_here
 ```
 
 > 🔑 Get a free NewsAPI key at [newsapi.org/register](https://newsapi.org/register)
 >
-> Yahoo Finance data is fetched without any authentication.
+> 🔑 Get a free Alpha Vantage key at [alphavantage.co/support#api-key](https://www.alphavantage.co/support#api-key)
 
 ### 4. Run the development server
 ```bash
@@ -113,8 +114,8 @@ StockSense/
 │   │   ├── SummaryPanel.jsx
 │   │   └── SignalsGrid.jsx
 │   ├── services/
-│   │   ├── newsApi.js          ← NewsAPI integration
-│   │   └── yahooFinance.js     ← Yahoo Finance data
+│   │   ├── newsApi.js              ← NewsAPI integration
+│   │   └── financial_data.py       ← Alpha Vantage data (Python)
 │   ├── App.jsx
 │   └── main.jsx
 ├── .env                        ← API keys (never commit this)
